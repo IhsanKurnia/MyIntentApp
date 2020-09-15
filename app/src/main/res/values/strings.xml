@@ -1,5 +1,8 @@
 <resources>
     <string name="app_name">MyIntentApp</string>
     <string name="pindah_activity">Pindah Activity</string>
-    <string name="ini_adalah_move_activity">Ini adalah Move Activity</string>
+    <string name="ini_adalah_move_activity">Ini adalah activity</string>
+    <string name="pindah_menampilkan_data">Pindah Menampilkan Data</string>
+    <string name="data_diri">Nama: Ihsan Kurnia\n Your Age: 22</string>
+
 </resources>

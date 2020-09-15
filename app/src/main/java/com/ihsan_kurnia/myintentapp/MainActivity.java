@@ -1,11 +1,11 @@
 package com.ihsan_kurnia.myintentapp;
 
-import androidx.appcompat.app.AppCompatActivity;
-
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
+
+import androidx.appcompat.app.AppCompatActivity;
 
 public class MainActivity extends AppCompatActivity implements View.OnClickListener {
 
@@ -17,15 +17,24 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         //Inistialisasi
         Button btnMoveActivity = findViewById(R.id.btn_move_activity);
         btnMoveActivity.setOnClickListener(this);
+
+        Button btnMoveWithDataActivity = findViewById(R.id.btn_move_activity_data);
+        btnMoveWithDataActivity.setOnClickListener(this);
     }
 
     @Override
     public void onClick(View v) {
-        switch (v.getId()){
+        switch (v.getId()) {
             case R.id.btn_move_activity:
                 Intent moveIntent = new Intent(MainActivity.this, MoveActivity.class);
                 startActivity(moveIntent);
-            break;
+                break;
+            case R.id.btn_move_activity_data:
+                Intent moveWithDataIntent = new Intent(MainActivity.this, MoveWithDataActivity.class);
+                moveWithDataIntent.putExtra(MoveWithDataActivity.EXTRA_NAME, "Ihsan Kurnia");
+                moveWithDataIntent.putExtra(MoveWithDataActivity.EXTRA_AGE, 22);
+                startActivity(moveWithDataIntent);
+                break;
         }
     }
 }
