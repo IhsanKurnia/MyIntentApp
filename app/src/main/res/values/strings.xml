@@ -4,5 +4,7 @@
     <string name="ini_adalah_move_activity">Ini adalah activity</string>
     <string name="pindah_menampilkan_data">Pindah Menampilkan Data</string>
     <string name="data_diri">Nama: Ihsan Kurnia\n Your Age: 22</string>
+    <string name="dial_number">Dial Number</string>
+    <string name="camera">Camera</string>
 
 </resources>
