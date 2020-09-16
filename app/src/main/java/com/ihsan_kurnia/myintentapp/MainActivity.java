@@ -31,6 +31,10 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         //Inisialisasi btnCamera
         Button btnCamera = findViewById(R.id.btn_camera);
         btnCamera.setOnClickListener(this);
+
+        //Inisalisasi Whatsapp
+        Button btnWhatsapp = findViewById(R.id.btn_whatsapp);
+        btnWhatsapp.setOnClickListener(this);
     }
 
     @Override
@@ -53,6 +57,9 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 break;
             case R.id.btn_camera:
                 startActivityForResult(new Intent(MediaStore.ACTION_IMAGE_CAPTURE_SECURE), 0);
+            case R.id.btn_whatsapp:
+                Intent whatsapp = new Intent(Intent.ACTION_VIEW, Uri.parse("https://api.whatsapp.com/send?phone=6282118838458"));
+                startActivity(whatsapp);
         }
     }
 }
